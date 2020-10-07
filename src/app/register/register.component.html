@@ -1,0 +1,16 @@
+<mat-card>
+    <span>Login</span>
+    <form [formGroup]="registeryForm" (ngSubmit)="onSubmit()">
+        <mat-form-field  appearance="fill" class="registery-field">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Enter Username" formControlName="Username">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill" class="registery-field">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Enter Password" formControlName="Password" type="password">
+        </mat-form-field>
+        <br>
+        <button mat-flat-button color="accent" [disabled]="!registeryForm.valid">Accent</button>
+    </form>
+</mat-card>
